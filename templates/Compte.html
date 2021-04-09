@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Compte</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style_login.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+		<div class="register">
+			<h1>Compte</h1>
+
+			<form action="http://localhost:5000/Compte" method="post">
+				
+				<label for="email">
+					<i class="fas fa-envelope"></i>
+				</label>
+				<input type="email" name="Email" placeholder="{{Email}}" id="email" disabled>
+
+				<label for="Nom">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="Nom" placeholder="{{Nom}}" id="username" >
+
+				<label for="Prenom">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="Prenom" placeholder="{{Prenom}}" id="username" >
+
+				<label for="Age">
+					Age
+				</label>
+				<input type="text" name="Age" placeholder="{{Age}}" id="username" >
+
+
+
+				<label for="Profession">
+					Profession
+				</label>
+				<input type="text" name="Profession" placeholder="{{Profession}}" id="username" >
+
+
+				<label for="Centre_interet">
+					Centre d'interet
+				</label>
+				<input type="text" name="Centre_interet" placeholder="{{Centre_interet}}" id="username" >
+
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="Mot_de_passe" placeholder="{{Mot_de_passe}}" id="password" >
+
+
+				<label for="Sexe">
+					Sexe
+				</label>
+				<select name="Sexe" placeholder="{{Sexe}}" id="username" >
+			    <option value="Femme">Femme</option>
+			    <option value="Homme">Homme</option>
+			  	</select>
+			  	<br><br><br>
+				
+				<input type="submit" value="Enregistrer">
+			</form>
+
+			<div>{{Msg}}</div>
+		</div>
+	</body>
+</html>

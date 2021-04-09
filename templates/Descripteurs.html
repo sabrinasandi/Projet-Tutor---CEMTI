@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Descripteurs </title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/descripteurs_formCss.css') }}">
+		<style type="text/css">#madiv{height:100pt;overflow:auto}</style>
+
+	</head>
+
+	<body>
+
+	<header>
+	<div>
+
+		<ul>
+		  <li><a class="active" href="{{url_for('Accueil')}}">Accueil</a></li>
+		  <li><a href="#news">Compte</a></li>
+		  <li><a href="#footer">Contact</a></li>
+		  <li style="float : right"><a href="{{ url_for('logout') }}">Deconnexion</a></li>
+		</ul>
+	</div>
+
+			<div class ="div_logo">
+				<center>
+				<img class = "logo" src="{{ url_for('static', filename='paris_8.png') }}">
+				<img  class = "logo" src="{{ url_for('static', filename='liasd.png') }}">
+				<img  class = "logo" src="{{ url_for('static', filename='cemti-logo.png') }}">
+				</center>
+			</div>
+			
+			<br>
+			<div class>
+				<div class="bandeau">
+					<div class = "bandeau_img">
+						<FONT size="15pt">Interpréter les Images-Chocs</FONT>		
+					</div>
+				</div>
+			</div>
+
+	</header>
+		<h2><center>Resultats prédiction</center></h2>
+		<div>
+
+				<div class="text_area">		
+						<img id="img_gauche" name = "Image" src="/static/test/non-violence/{{V_nonV}}/{{Image}}">
+						
+				</div>
+
+
+				<div class="text_area">
+					<label for="description" > Annotation faite par <b>{{utilisateur}}</b> :</label><br>
+				   <textarea name="Annotation" rows="5" cols="150" readonly="readonly"> {{Annotation}} </textarea>
+				</div>
+				<div class="text_area">
+					<label for="description"> Annotation faite par le système :</label><br>
+				   <textarea name="AnnotationSYS" rows="5" cols="150" readonly="readonly"> le fichier est une {{Type_media}}, le modele utilisé est le {{Modele}}, Resultat de prediction : {{AnnotationSYS}}</textarea>
+				</div>
+
+				<div class="text_area">
+					<label for="descripteurs"> Descripteurs de l'avant derniere couche :</label><br>
+					<img name = "Nom_model" src="/static/Descripteurs_image/DescripteursMobileNet.PNG">
+				</div>
+
+            
+		</div>
+
+		<footer>
+			<center>
+			<p class= "footer">
+			2 rue de la liberté - 93526 Saint-Denis Cedex
+			<br>
+			Tel : +33(0)1 49 40 67 89
+			<br>
+			Fax : +33(0)1 48 21 04 46
+			</p></center>
+		</footer>
+	</body>
+</html>
+
+<style type="text/css">
+	ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #333;
+	}
+
+	li {
+	  float: left;
+	  border-right:1px solid #bbb;
+	}
+
+	li:last-child {
+	  border-right: none;
+	}
+
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+
+	li a:hover:not(.active) {
+	  background-color: #111;
+	}
+	
+	.footer {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+	}
+
+	.active {
+	  background-color: #FC9081;
+	}
+
+	.logo{
+    width: 100px;
+    height: 100px
+	}
+
+	div{
+	    display: block;
+	    border: ridge;
+	    overflow: auto;
+	    white-space: nowrap;
+	}

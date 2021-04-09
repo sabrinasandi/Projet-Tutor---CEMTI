@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Explicabilité </title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/hist_formCss.css') }}">	
+		<style type="text/css">#madiv{height:100pt;overflow:auto}</style>
+
+	</head>
+
+	<body>
+	<header>
+	<div>
+
+		<ul>
+		  <li><a class="active" href="Accueil">Accueil</a></li>
+		  <li><a href="#news">Compte</a></li>
+		  <li><a href="#footer">Contact</a></li>
+		  <li style="float : right"><a href="{{ url_for('logout') }}">Deconnexion</a></li>
+		</ul>
+	</div>
+
+			<div class ="div_logo">
+				<center>
+				<img class = "logo" src="{{ url_for('static', filename='paris_8.png') }}">
+				<img  class = "logo" src="{{ url_for('static', filename='liasd.png') }}">
+				<img  class = "logo" src="{{ url_for('static', filename='cemti-logo.png') }}">
+				</center>
+			</div>
+			<br>
+			<div class>
+				<div class="bandeau">
+					<div class = "bandeau_img">
+						<FONT size="15pt">Interpréter les Images-Chocs</FONT>		
+					</div>
+				</div>
+			</div>
+
+	</header>
+		<h2><center>Historique des annotations utilisateurs et système sur l'image choisi</center></h2>
+
+		<div class="div_table">
+			<div class = "form">
+			<form action="http://localhost:5000/Historique" method="post">
+				<label for="avatar">Choisir une image/vidéo</label><br>			
+				<input type="file"
+			       id="media" name="Image"
+			       accept="image/png, image/jpeg, video/mp4">
+			
+				<br><br>
+
+			  <input type="submit" value="Prediction">
+			</form> 
+		</div>
+		</div>
+			<br>
+			<br>
+			<br>
+		<div class="div_table">
+
+
+		<table>
+		   <tr>
+		       <td><b>Utilisateur</b></td>
+		       <td><b>Date </b></td>
+		       <td><b>Modèle</b></td>
+		       <td><b>Annotation utilisateur</b></td>
+		       <td><b>Annotation système</b></td>
+
+		   </tr>
+		  
+		   {% for i in range(0, Account| length) %}
+		   <tr>
+		   		<td>{{User[i]}}</td>
+		   		<td>{{Account[i][0]}}</td>
+		   		<td>{{Account[i][1]}}</td>
+		   		<td>{{Account[i][2]}}</td>
+		   		<td>{{Account[i][3]}}</td>
+		   </tr>
+		   {% endfor %}
+
+		</table>
+
+		
+		</div>
+				<div>
+					<center><h1>Statistiques sur {{Type_media}} choisie</h1></center>
+				
+						<h1>Total des annotations sur {{Type_media}} chosie : {{Total_annotation}}</h1>
+						<h1>Annoté violente : {{Violence_annotation}} fois</h1>
+						<h1>Annoté non-violente : {{Nviolence_annotation}} fois</h1>
+					
+					<h1>{{Type_media}} est prédite : </h1>
+					
+						<h1>{{Violence_pourcentage}} % violente </h1>
+						<h1>{{Nviolence_pourcentage}} % non violente </h1>
+					<h1>Conclusion</h1>
+					<h1>compte tenu du nombre d'annotations faites par différents utilisateurs</h1>
+					<h1>{{Type_media}} est predite : <b>{{Prediction}}</b></h1>
+				</div>
+
+		<footer>
+			<center>
+			<p class= "footer">
+			2 rue de la liberté - 93526 Saint-Denis Cedex
+			<br>
+			Tel : +33(0)1 49 40 67 89
+			<br>
+			Fax : +33(0)1 48 21 04 46
+			</p></center>
+		</footer>
+	</body>
+</html>
+
+<style type="text/css">
+	ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #333;
+	}
+
+	li {
+	  float: left;
+	  border-right:1px solid #bbb;
+	}
+
+	li:last-child {
+	  border-right: none;
+	}
+
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+
+	li a:hover:not(.active) {
+	  background-color: #111;
+	}
+
+	.footer {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+	}
+	
+	.active {
+	  background-color: #FC9081;
+	}
+
+	.logo{
+    width: 100px;
+    height: 100px
+	}
+
+	div{
+	    display: block;
+	    border: ridge;
+	    overflow: auto;
+	    white-space: nowrap;
+	}

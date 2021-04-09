@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Inscription Utilisateur</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/Inscription_utilisateurCss.css') }}">
+	</head>
+	<body>
+
+		<div class="div_logo">
+			<img class = "logo" src="/static/paris_8.png">
+		</div>
+
+		<div class>
+			<div class="bandeau">
+				<div class = "bandeau_img">
+					<a href="hello">
+						<img class= "mx-auto d-block img-fluid" src="/static/cemti-logo.png">
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<h2><center>Formulaire d'inscription</center></h2>
+	
+
+		<div class = "form">
+			<form action="http://localhost:5000/Accueil" method="post">
+				<label for="email">E-mail:</label><br>
+				<input type="text" id="email" name="email" >
+			  
+				<br><br>
+				<label for="nom">Nom:</label><br>
+				<input type="text" id="nom" name="nom" >
+
+				<br><br>
+				<label for="prenom">Prénom:</label><br>
+				<input type="text" id="prenom" name="prenom" >
+
+				<br><br>
+				<label for="age">Age:</label><br>
+				<input type="text" id="age" name="age" >
+			  	  
+				<br><br>
+				<label for="sexe">Sexe:</label><br>
+				<select id="sexe" name="sexe">
+			    <option value="homme">Homme</option>
+			    <option value="femme">femme</option>
+			  	</select>
+
+				<br><br>
+			  	<label for="profession"> Profession:</label><br>
+				<input type="text" id="profession" name="profession" >
+			  	  
+			  	<br><br>
+			  	<label for="centre_interet"> Centre d'intérêt:</label><br>
+			   	<textarea rows="5" cols="10" name="centre_interet">Sport, voyages ... </textarea>
+
+				<br><br>
+			  	<label for="mdp"> Mot de passe:</label><br>
+				<input type="password" id="mdp" name="mdp" >
+			  	  			
+				<br><br>
+
+			  <input type="submit" value="Valider">
+			</form> 
+		</div>
+
+
+	</body>
+</html>
