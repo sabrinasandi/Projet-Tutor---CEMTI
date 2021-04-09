@@ -1,0 +1,49 @@
+body{
+    background-color : #F9F2F1;
+}
+
+.logo{
+    width: 100px;
+    height: 100px
+
+}
+
+div{
+    display: block;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: inherit;
+    background-color: #FC9081;
+    border: outset;
+    padding: 30px;
+}
+
+
+.bandeau img {
+    max-height: 165px;
+    object-fit: cover;
+
+}
+
+.bandeau_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: inherit;
+    background-color: #FC9081;
+}
+
+
+
+div{
+    border: ridge;
+}
+
+.div_logo{
+    border: none;
+}
+

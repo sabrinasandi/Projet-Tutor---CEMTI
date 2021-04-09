@@ -1,0 +1,57 @@
+body{
+    background-color : #F9F2F1;
+}
+
+.logo{
+    width: 100px;
+    height: 100px
+}
+
+div{
+    display: block;
+    border: ridge;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: inherit;
+    background-color: #FC9081;
+    border: outset;
+}
+
+.text_area{
+    padding: 30px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.bandeau img {
+    max-height: 165px;
+    object-fit: cover;
+
+}
+
+.bandeau_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: inherit;
+    background-color: #FC9081;
+}
+
+
+#img_gauche {
+    width:250px;
+    height: 250px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    min-height: inherit;
+    border: solid; 
+}
+
+.div_logo{
+    border: none;
+}

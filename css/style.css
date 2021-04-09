@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+body{
+	background-color : #F9F2F1;
+}
+
+div{
+	display: block;
+	border: ridge;
+}
+
+.logo{
+	width: 10%;
+	height: 100%;
+}
+
+
+.button_pred{
+	width: 300px;
+	height: 250px;
+	border: outset;
+
+	display: inline-block;
+	justify-content: center;
+    align-items: center;
+}
+
+.button_hist{
+	width: 300px;
+	height: 250px;
+	border: outset;
+	margin-left: 100px;
+	display: inline-block;
+	justify-content: center;
+    align-items: center;
+}
+
+.buttons{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: inherit;
+    margin-top: 100px;
+    height: 50%;
+    border: none;
+}
+.bandeau_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: inherit;
+    background-color: #FC9081;    
+}
+
+
+.bandeau img {
+    max-height: 165px;
+    object-fit: cover;
+
+}
+.div_logo{
+    border: none;
+}
